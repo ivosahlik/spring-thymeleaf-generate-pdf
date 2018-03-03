@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE xsl:stylesheet>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output
+            method="html"
+            encoding="utf-8"
+            indent="yes"
+            doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+            doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
+
+
+    <xsl:template match="struct">
+
+        <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+        <head>
+
+            <!--<style>-->
+                <!--h2 {-->
+                    <!--color: red;-->
+                <!--}-->
+            <!--</style>-->
+
+            <link rel="stylesheet" type="text/css" media="all"  href="src/main/resources/static/css/test.css" />
+
+        </head>
+
+        <body style="font-family:  Arial;">
+
+
+                <h1 style="color:blue;">This is a Blue Heading</h1>
+                <h2>This is a Blue Heading</h2>
+
+                <p th:text="'First Name: ' + ${firstname} + '!'"/>
+
+                <p th:text="'Last Name: ' + ${lastname} + '!'"/>
+
+
+                <h1>+ěščřžýáíéťďň</h1>
+
+        </body>
+
+        </html>
+
+    </xsl:template>
+
+</xsl:stylesheet>

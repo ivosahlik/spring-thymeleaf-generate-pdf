@@ -1,0 +1,13 @@
+@page {
+    margin: 0mm;
+    padding: 0mm;
+    size: 210mm 297mm;
+}
+
+html {
+    background: white;
+    height: 100%;
+    position: relative;
+    font-size: 8pt;
+    font-family:  Arial;
+}

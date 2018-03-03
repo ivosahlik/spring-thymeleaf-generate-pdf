@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+
+    <style>
+        /*h1 {*/
+            /*background: red;*/
+        /*}*/
+    </style>
+
+    <link rel="stylesheet" type="text/css" media="all"  href="src/main/resources/static/css/greeting.css" />
+
+</head>
+<body>
+
+<h1 style="color:blue;">This is a Blue Heading</h1>
+<h2>This is a Blue Heading</h2>
+
+
+<p th:text="'First Name: ' + ${firstname} + '!'"/>
+
+<p th:text="'Last Name: ' + ${lastname} + '!'"/>
+
+<div th:if="${work} == 'false'">
+    <span th:text="'Price: ' + ${price}"/> <span th:text="${mena}"/>
+</div>
+
+
+<h1>+ěščřžýáíéťďň</h1>
+
+
+</body>
+</html>
