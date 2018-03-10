@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="goodmornig">
+
+    <h1 style="color:blue;">Good morning</h1>
+    <h2>Good morning</h2>
+
+    <p th:text="'First Name: ' + ${d_partner_os_jmeno} + '!'"/>
+
+    <p th:text="'Last Name: ' + ${d_partner_os_prijmeni} + '!'"/>
+
+    <div th:if="${work} == 'false'">
+        <span th:text="'Price: ' + ${price_partner}"/> <span th:text="${mena}"/>
+    </div>
+
+    <h1>+ěščřžýáíéťďň</h1>
+
+</div>
+
+</body>
+</html>

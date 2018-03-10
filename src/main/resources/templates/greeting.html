@@ -16,21 +16,25 @@
 </head>
 <body>
 
-<h1 style="color:blue;">This is a Blue Heading</h1>
-<h2>This is a Blue Heading</h2>
+    <img src="http://java4all.in/java/images/spring_big.jpg" height="100px" width="150px" alt="logo"/>
+
+    <h1 style="color:blue;">This is a Blue Heading</h1>
+    <h2>This is a Blue Heading</h2>
+
+    <p th:text="'Číslo úvěru: ' + ${d_numaut}"/>
+
+    <p th:text="${d_oslov +' '+ d_klient_os_jmeno +' '+ d_klient_os_prijmeni}"/>
+
+    <p th:text="'First Name: ' + ${d_klient_os_jmeno} + ' ,Last Name: ' + ${d_klient_os_prijmeni}"/>
 
 
-<p th:text="'First Name: ' + ${firstname} + '!'"/>
+    <div th:if="${work} == 'false'">
+        <span th:text="'Price: ' + ${price_klient}"/> <span th:text="${mena}"/>
+    </div>
 
-<p th:text="'Last Name: ' + ${lastname} + '!'"/>
+    <h1>+ěščřžýáíéťďň</h1>
 
-<div th:if="${work} == 'false'">
-    <span th:text="'Price: ' + ${price}"/> <span th:text="${mena}"/>
-</div>
-
-
-<h1>+ěščřžýáíéťďň</h1>
-
+    <div th:replace="goodmornig :: goodmornig">...</div>
 
 </body>
 </html>
