@@ -52,6 +52,7 @@ public class PdfGenaratorUtil {
      * @param processedHtml
      * @return
      * @throws DocumentException
+     * @throws IOException
      */
     public ByteArrayOutputStream render(String processedHtml) throws DocumentException, IOException {
 
@@ -155,8 +156,8 @@ public class PdfGenaratorUtil {
      * @throws IOException
      */
     public Context contextMap() throws ParserConfigurationException, SAXException, IOException {
-        Map<String,String> data = new HashMap<>();
 
+        Map<String,String> data = new HashMap<>();
         NodeList nodeList = document().getDocumentElement().getChildNodes();
 
         for(int k=0;k<nodeList.getLength();k++){
