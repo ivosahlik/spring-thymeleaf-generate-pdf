@@ -31,6 +31,9 @@ public class PdfGenaratorUtil {
     @Autowired
     private TemplateEngine templateEngine;
 
+    @Autowired
+    private PdfEncriptionUtil pdfEncriptionUtil;
+
 
     /**
      * This method return template engine, html + data
@@ -74,6 +77,7 @@ public class PdfGenaratorUtil {
             renderer.getFontResolver().addFont(fonts[i].getAbsolutePath(), "cp1250", true);
         }
 
+        renderer.setPDFEncryption(pdfEncriptionUtil.getPdfEncryption());
         renderer.layout();
         renderer.createPDF(bos, false);
         renderer.finishPDF();
