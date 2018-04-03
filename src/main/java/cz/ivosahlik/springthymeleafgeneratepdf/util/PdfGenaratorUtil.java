@@ -28,6 +28,12 @@ import java.util.Map;
 @Component
 public class PdfGenaratorUtil {
 
+    private static final String PATH_NAME_TTF = "src/main/resources/ttf";
+
+    private static final String TTF_SUFFIX = ".ttf";
+
+    private static final String CODING_CP1250 = "cp1250";
+
     @Autowired
     private TemplateEngine templateEngine;
 
@@ -63,18 +69,18 @@ public class PdfGenaratorUtil {
         ITextRenderer renderer = new ITextRenderer();
         renderer.setDocumentFromString(processedHtml);
 
-        String fontsDir = new File("src/main/resources/ttf").getAbsolutePath();
+        String fontsDir = new File(PATH_NAME_TTF).getAbsolutePath();
 
         File[] fonts = new File(fontsDir).listFiles(new FileFilter() {
             @Override
             public boolean accept(File pathname) {
-                return pathname.getAbsolutePath().endsWith(".ttf");
+                return pathname.getAbsolutePath().endsWith(TTF_SUFFIX);
             }
         });
 
         for (int i = 0; i < fonts.length; i++) {
 //            log.info("Renderer adding font " + fonts[i]);
-            renderer.getFontResolver().addFont(fonts[i].getAbsolutePath(), "cp1250", true);
+            renderer.getFontResolver().addFont(fonts[i].getAbsolutePath(), CODING_CP1250, true);
         }
 
         renderer.setPDFEncryption(pdfEncriptionUtil.getPdfEncryption());
@@ -128,7 +134,7 @@ public class PdfGenaratorUtil {
             String value = nodes.getTextContent();
 
             if(prefix != "") {
-//                log.info(prefix + "_" + key + " : " + value);
+                log.info(prefix + "_" + key + " : " + value);
                 data.put(prefix + "_" + key, value);
             } else {
                 if(length <= 1) {
