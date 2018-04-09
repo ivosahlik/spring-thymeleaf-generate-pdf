@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct>
-    <d_numaut>208491133564896</d_numaut>
+    <d_numaut>999999999999</d_numaut>
     <d_x_typ>X</d_x_typ>
     <d_typ>6</d_typ>
     <d_akce>7</d_akce>
@@ -49,8 +49,8 @@
     <d_urok_pm>N0000</d_urok_pm>
     <d_typpoj/>
     <d_typ2/>
-    <d_adresa>RENOIROVA 234/3</d_adresa>
-    <d_mesto>PRAHA</d_mesto>
+    <d_adresa>ULICETEXT 234/3</d_adresa>
+    <d_mesto>PRAGUE</d_mesto>
     <d_psc>15200</d_psc>
     <d_telefon/>
     <d_habitat>P</d_habitat>
@@ -219,7 +219,7 @@
     <d_casstat>140700</d_casstat>
     <d_fin/>
     <d_modif/>
-    <d_operator2>MARIE</d_operator2>
+    <d_operator2>TEST</d_operator2>
     <d_weblist/>
     <d_reopen/>
     <d_fill1>W</d_fill1>
@@ -354,7 +354,7 @@
     <P_TYPE/>
     <DATE>30. 1. 2018</DATE>
     <LOCALITY>Praze</LOCALITY>
-    <A_ID>Y50JKEJ2AR80IGJZO6AWC2A4512HN0XZ</A_ID>
+    <A_ID>Y50JKEJ2AR80IGJZO6AWC2A4512HN0XZAZBSTR2+2</A_ID>
     <A_USERNAME>2084911MARIE</A_USERNAME>
     <A_CERTID>0000</A_CERTID>
     <P_ID>193502</P_ID>

@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.xhtmlrenderer.pdf.PDFEncryption;
 
+import static cz.ivosahlik.springthymeleafgeneratepdf.config.Constants.PASSWORD;
+
+
 /**
  * Intellij Idea
  * Created by ivosahlik on 18/03/2018
@@ -11,9 +14,6 @@ import org.xhtmlrenderer.pdf.PDFEncryption;
 @Slf4j
 @Component
 public class PdfEncriptionUtil {
-
-    private final static String PASSWORD = "admin";
-
 
     /**
      *  This method return pdf encription

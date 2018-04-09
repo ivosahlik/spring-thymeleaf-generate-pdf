@@ -20,6 +20,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import static cz.ivosahlik.springthymeleafgeneratepdf.config.Constants.*;
+
 /**
  * Intellij Idea
  * Created by ivosahlik on 27/02/2018
@@ -27,12 +29,6 @@ import java.util.Map;
 @Slf4j
 @Component
 public class PdfGenaratorUtil {
-
-    private static final String PATH_NAME_TTF = "src/main/resources/ttf";
-
-    private static final String TTF_SUFFIX = ".ttf";
-
-    private static final String CODING_CP1250 = "cp1250";
 
     @Autowired
     private TemplateEngine templateEngine;
@@ -104,7 +100,7 @@ public class PdfGenaratorUtil {
      */
     public Document document() throws IOException, SAXException, ParserConfigurationException {
 
-        File inputXmlFile = new File("src/main/resources/data/data.input.xml");
+        File inputXmlFile = new File(INPUTXMLFILE);
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 
@@ -134,8 +130,8 @@ public class PdfGenaratorUtil {
             String value = nodes.getTextContent();
 
             if(prefix != "") {
-                log.info(prefix + "_" + key + " : " + value);
-                data.put(prefix + "_" + key, value);
+                log.info(prefix + UNDERLINE + key + " : " + value);
+                data.put(prefix + UNDERLINE + key, value);
             } else {
                 if(length <= 1) {
 //                    log.info(key + " : " + value);

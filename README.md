@@ -1,3 +1,8 @@
+# run
+mvn clean package
+
+mvn spring-boot:run
+
 # generate pdf
 http://localhost:8080/generate/pdf?template=greeting
 
